@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>validasyon çalışması</title>
+
+</head>
+<body>
+
+<form action="#" id="formid">
+  First name:<br>
+  <input type="text" name="firstname" value="" id="userid" >
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="" id="email">
+  <br><br>
+  <input type="submit" value="Submit" id="btn">
+</form> 
+
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery_validation.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() { 
+$('#formid').validate({ 
+rules: { 
+userid: { required: true, number: true }, 
+email: { required: true, email: true }
+}, 
+messages: { 
+userid: { required: 'Gerekli', number: 'Lütfen sayı giriniz' }, 
+email: { required: 'Gerekli', email: 'Lütfen geçerli bir e-mail adresi giriniz' }
+} 
+}); 
+}); 
+</script>
+
+
+</body>
+</html>
